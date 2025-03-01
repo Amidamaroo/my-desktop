@@ -1,20 +1,20 @@
 
 
 # reloads sxhkd configuration:
-super + Escape + r
+super + shift + r
     pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config' -t 1500
 
 # Launch Terminal
 super + Return
-    alacritty
+   kitty
 
 # Hide or Unhide Polybar
-super + p
+super + shift + p
 	sh $HOME/bin/toggle-polybar
 
 # Set random wallpaper
-super + w
-	sh $HOME/bin/random_wallpaper
+#super + ]
+#	sh $HOME/bin/color-scripts/pacman
 
 # Change language
 Alt_L + shift
@@ -24,38 +24,36 @@ Shift_L + alt
 	sh $HOME/bin/change_language.sh
     
 # Launch Rofi Menu
-super + {d,x}
-    {rofi -show drun,sh $HOME/bin/powermenu}
+super + d
+    {rofi -show drun}
+
+super + 9
+	{ sh $HOME/bin/powermenu }
 
 # Launch Applications
-super + shift + {f,n,p,t,c,v,i,x,q,k,l}
-	{firefox, \
+super + {x,e,s,z,8}
+	{zen, \
 	thunar, \
-	pavucontrol, \
-	telegram-desktop, \
-	code, \
-	virtualbox, \
-	firefox --private-window, \
-	sh $HOME/bin/xcolor-pick, \
-	sh $HOME/bin/bible, \
-	alacritty -e calcurse, \
-	sh $HOME/bin/screen-lock}
+	steam, \
+	telegram-desktop,\
+	sh $HOME/bin/launch.sh \ }
      
-# Select window to close
-ctrl + super + alt + k
-	{xkill}
-
 # Volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
     sh $HOME/bin/volume{ --up, --down, --toggle}
 
-# Brightness controls
-XF86MonBrightness{Up,Down}
-    sh $HOME/bin/brightness{ --up, --down}
 
 # screenshot
-Print
+super + shift + s
     flameshot gui
+
+#clip
+super + v
+	/usr/bin/diodon
+
+
+super + shift + e
+	/home/user/Downloads/eXpress*
 
 #
 #
@@ -64,11 +62,11 @@ Print
 #
 
 # quit/restart bspwm
-ctrl + shift + {q,r}
+ctrl + shift + r
     bspc {quit,wm -r}
 
 # close and kill
-super + c
+super  + q
     bspc node -c
 
 # alternate between the tiled and monocle layout
@@ -123,13 +121,14 @@ super + ctrl + shift + space
 #
 
 # Expanding windows
-super + control {h,j,k,l}
+super + alt + {h,j,k,l}
     bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20} 
 
 # Send the window to another edge of the screen
-super + {_,alt + }{h,j,k,l}
-    bspc node -{f,s} {west,south,north,east}
 
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+	
 # move a floating window
 # TODO: Вызывает конфликт с другими комбинациями 
 #super + x + {h,j,k,l}
