@@ -11,3 +11,10 @@ polybar top -r >>/tmp/polybar1.log 2>&1 & disown
 
 echo "Bars launched..."
 
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload top &
+  done
+else
+  polybar --reload top &
+fi
