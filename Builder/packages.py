@@ -20,12 +20,12 @@ DEV_PACKAGES = [
     "cheese", "screenkey", "timeshift", "pinta", "kdenlive", "wireshark-qt",
     "ghex", "chromium", "audacity", "gufw", 
     "bleachbit","gtkhash", "gnome-firmware", "touche", "dconf-editor",
-    "neovim", "obs-studio", "telegram-desktop", "tmux","cowsay",
+    "obs-studio", "telegram-desktop", "tmux","cowsay",
     "deluge-gtk", "flameshot", "obsidian"
 ]
 
 AUR_PACKAGES = [
-    "cava", "i3lock-color", "vim-plug"
+    "cava", "i3lock-color", "vim-plug", "ly"
 ]
 
 GNOME_OFFICIAL_TOOLS = [
