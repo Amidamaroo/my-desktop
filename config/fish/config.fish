@@ -2,8 +2,10 @@
 # Create aliases
 alias m="micro"
 alias ls="exa -a --icons"
-alias v="vim"
-alias update="yay && kitten notify "обновились" && shutdown && cmatrix"
+alias  update='sudo pacman -Syu --noconfirm && kitten notify "обновились" && sudo shutdown && cmatrix'
+alias weaver="curl wttr .in/moscow"
+alias ssh="lazyssh"
+alias cat="bat"
 # TODO: Replace journal aliases after switching to OpenRC
 
 # Display critical errors
@@ -25,7 +27,7 @@ set -U fish_greeting
 set fish_color_command green
 set -gx EDITOR vim 
 set -gx VISUAL vim 
-set -gx BROWSER /usr/bin/floorp
+set -gx BROWSER /usr/bin/zen
 
 
 if status is-interactive
@@ -45,3 +47,4 @@ function yy
 	rm -f -- "$tmp"
 end
 
+mise activate fish | source

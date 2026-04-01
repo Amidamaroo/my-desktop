@@ -1,22 +1,22 @@
 configuration{
     modi: "run,drun,window";
     lines: 5;
-    font: "JetBrainsMono Nerd Font 14";
+    font: "JetBrainsMono Nerd Font 16";
     show-icons: true;
     icon-theme: "Papirus-dark";
-    terminal: "alacritty";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: "   window";
-    display-Network: " 󰤨  Network";
+    display-drun: "    ";
+    display-run: "    ";
+    display-window: "   ";
+    display-Network: " 󰤨  ";
     sidebar-mode: true;
 }
 
-@theme "catppuccin"
+//@theme "catppuccin"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -101,3 +101,17 @@ button selected {
   background-color: @bg-col;
   text-color: @blue;
 }
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+//@theme "/usr/share/rofi/themes/tokyonight.rasi"
+//@theme "/usr/share/rofi/themes/tokyonight_big2.rasi"
+
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+
+//@theme "/usr/share/rofi/themes/dmenu.rasi"
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/home/user/.local/share/rofi/themes/minimal.rasi"
+
+@theme "/usr/share/rofi/themes/very_dark.rasi"

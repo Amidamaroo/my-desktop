@@ -27,17 +27,30 @@ Shift_L + alt
 super + d
     {rofi -show drun}
 
-super + 9
+super + 0
 	{ sh $HOME/bin/powermenu }
+#music
+super + n
+	/home/user/Downloads/yaamp-linux/artifacts/Yaamp-0.0.5.AppImage
+#browser
+super + b
+	zen
+#file manager
+super + e 
+	thunar
+#steam
+super + i
+	steam
+#portproton
+super + p
+	portproton
 
-# Launch Applications
-super + {x,e,s,z,8}
-	{zen, \
-	thunar, \
-	steam, \
-	telegram-desktop,\
-	sh $HOME/bin/launch.sh \ }
-     
+#telegram
+super + z
+	Telegram
+#wallpaper
+super + 9 
+	sh /home/user/.config/bspwm/scripts/launch.sh
 # Volume controls
 XF86Audio{RaiseVolume,LowerVolume,Mute}
     sh $HOME/bin/volume{ --up, --down, --toggle}
@@ -45,7 +58,7 @@ XF86Audio{RaiseVolume,LowerVolume,Mute}
 
 # screenshot
 super + shift + s
-    flameshot gui
+    QT_ENABLE_HIGHDPI_SCALING=0 flameshot gui
 
 #clip
 super + v
@@ -97,8 +110,12 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # send focus window to current desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+super + {_,shift + }{1-3}
+	bspc {desktop -f,node -d} '^{1-3}'
+
+alt + {_,shift + }{1-3}
+	bspc {desktop -f,node -d} '^{4-6}'
+
 
 #
 # preselect
