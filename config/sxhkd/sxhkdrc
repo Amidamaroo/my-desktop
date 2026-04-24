@@ -34,7 +34,7 @@ super + n
 	/home/user/Downloads/yaamp-linux/artifacts/Yaamp-0.0.5.AppImage
 #browser
 super + b
-	zen
+	zen-browser
 #file manager
 super + e 
 	thunar
@@ -115,6 +115,15 @@ super + {_,shift + }{1-3}
 
 alt + {_,shift + }{1-3}
 	bspc {desktop -f,node -d} '^{4-6}'
+
+#alt + {_,shift + }{1-3}
+#	bspc {desktop -f,node -d} '^{4-6}'
+alt + shift + {1-3}
+	bspc node -d '^{4-6}'
+
+
+alt + {1-3}
+	bspwm-slidefx -w '^{4-6}'
 
 
 #
